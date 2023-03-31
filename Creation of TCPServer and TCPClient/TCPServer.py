@@ -4,11 +4,11 @@ import socket #importamos el modulo socket
 
 serversocket= socket.socket(socket.AF_INET, socket.SOCK_STREAM) #creamos el socket
 
-###host= '192.168.100.20' 
-host = socket.gethostname() #obtenemos el nombre de la maquina
+#host= '192.132.1.2' #esta será la dirección ipv4 de nuestra maquina
+host = socket.gethostname() #obtenemos el nombre de la maquina, esto con fines de automatizacion y que el programa sea mas inteligente
 port = 444  #reservamos un puerto para la conexion
 
-serversocket.bind(('192.168.100.20', port)) #ligamos el socket a la direccion
+serversocket.bind(('192.132.1.2', port)) #ligamos el socket a la direccion con el host o simplemente ingresamos la direccion ipv4 de nuestra maquina
 
 serversocket.listen( 3 )# el numero 3 es la cantidad de conexiones que se pueden hacer 
 
